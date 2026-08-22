@@ -5,9 +5,12 @@
   "engines": {
     "node": "24.x"
   },
+  "prisma": {
+    "schema": "prisma/schema.prisma"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "prisma generate --schema=./prisma/schema.prisma && next build",
     "start": "next start",
     "migrate": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy"
