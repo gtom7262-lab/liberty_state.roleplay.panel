@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 250" role="img" aria-label="Liberty State Roleplay Logo">
-  <defs><filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-  <g fill="none" stroke="#36d9ff" stroke-width="7" stroke-linejoin="round" filter="url(#glow)"><path d="M210 18l19 50 43-38-24 51 57-7-51 29 45 37-55-17 12 56-39-44-25 52-4-57-54 29 34-47-56-9 54-18-35-45 52 28z"/><path d="M153 133h114l-13 53H166z"/><path d="M143 191h134"/></g>
-  <circle cx="210" cy="110" r="39" fill="#07101e" stroke="#fff" stroke-width="4"/><path d="M190 121c5-25 35-25 40 0l-8 14h-25z" fill="#fff"/><path d="M199 96h22l8 9h-38z" fill="#fff"/>
-  <text x="210" y="177" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700" letter-spacing="1">LIBERTY STATE</text><text x="210" y="211" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="15" letter-spacing="4">ROLEPLAY</text>
-</svg>
