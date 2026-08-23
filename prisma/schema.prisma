@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String?
+  email     String   @unique
+  password  String
+  role      String   @default("Spieler")
+  createdAt DateTime @default(now())
+
+  threads   Thread[]
+  posts     Post[]
+}
+
+model Thread {
+  id          String   @id @default(cuid())
+  title       String
+  category    String
+  status      String   @default("Offen")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  authorId    String
+  author      User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  posts       Post[]
+
+  @@index([category, status])
+  @@index([createdAt])
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  content   String
+  createdAt DateTime @default(now())
+  authorId  String
+  threadId  String
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  thread    Thread   @relation(fields: [threadId], references: [id], onDelete: Cascade)
+
+  @@index([threadId, createdAt])
+}
